@@ -1,81 +1,13 @@
-
 <!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lamech Imeh-john | Senior Product Designer</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#008039",
-                        "primary-dark": "#005a28",
-                        "primary-light": "#00a64b",
-                        "secondary": "#7fbf9b",
-                        "background-light": "#f5f8f7",
-                        "background-dark": "#0a0f0c",
-                        "surface-dark": "#131c17",
-                        "surface-darker": "#0a1610",
-                        "border-dark": "#23332a",
-                        "accent-text": "#9abca9"
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Noto Sans", "sans-serif"],
-                    },
-                    backgroundImage: {
-                        'grid-pattern': "linear-gradient(to right, #1a2e23 1px, transparent 1px), linear-gradient(to bottom, #1a2e23 1px, transparent 1px)",
-                        'radial-glow': "radial-gradient(circle at 50% 50%, rgba(0, 128, 57, 0.15) 0%, transparent 70%)"
-                    },
-                    animation: {
-                        'spin-slow': 'spin 8s linear infinite',
-                    }
-                },
-            },
-        }
-    </script>
-    <style>
-        body {
-            font-family: "Space Grotesk", sans-serif;
-            background-color: #0a0f0c;
-            color: #f1f5f9;
-        }
-        .glass-panel {
-            background: rgba(19, 28, 23, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(127, 191, 155, 0.1);
-        }
-        .text-stroke {
-            -webkit-text-stroke: 1px rgba(0, 128, 57, 0.5);
-            color: transparent;
-        }
-        .vertical-text {
-            writing-mode: vertical-rl;
-        }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a0f0c; }
-        ::-webkit-scrollbar-thumb { background: #1a2e23; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #008039; }
-    </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
-  }
-}
-</script>
-</head>
-<body class="selection:bg-primary selection:text-white">
+  </head>
+  <body>
     <div id="root"></div>
-</body>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

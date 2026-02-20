@@ -1,7 +1,4 @@
-
-import { Project, Experience, Credential, Academic } from './types';
-
-export const PROJECTS: Project[] = [
+export const PROJECTS = [
   {
     id: '1',
     title: 'Neobank Dashboard',
@@ -40,7 +37,7 @@ export const PROJECTS: Project[] = [
   }
 ];
 
-export const EXPERIENCES: Experience[] = [
+export const EXPERIENCES = [
   {
     id: 'exp1',
     role: 'Senior Product Designer',
@@ -76,7 +73,7 @@ export const EXPERIENCES: Experience[] = [
   }
 ];
 
-export const CERTIFICATIONS: Credential[] = [
+export const CERTIFICATIONS = [
   {
     id: 'cert1',
     title: 'Google UX Design Professional Certificate',
@@ -103,7 +100,7 @@ export const CERTIFICATIONS: Credential[] = [
   }
 ];
 
-export const ACADEMICS: Academic[] = [
+export const ACADEMICS = [
   {
     id: 'edu1',
     degree: 'BSc. Building Technology',

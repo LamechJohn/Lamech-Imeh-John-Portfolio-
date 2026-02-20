@@ -1,15 +1,15 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { FiLayers, FiMessageCircle } from "react-icons/fi";
+import { HiOutlineCheckBadge } from "react-icons/hi2";
+import { HiOutlineCube } from "react-icons/hi2";
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const Home: React.FC = () => {
+export default function Home() {
   return (
     <div className="w-full max-w-7xl mx-auto px-6 py-12 lg:py-24 flex flex-col lg:flex-row items-center gap-16 relative">
-      {/* Decorative Architectural Lines */}
       <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/20 to-transparent hidden lg:block"></div>
       <div className="absolute right-6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/20 to-transparent hidden lg:block"></div>
 
-      {/* Text Content */}
       <div className="flex-1 flex flex-col gap-8 relative z-10 w-full lg:w-1/2">
         <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
@@ -30,11 +30,11 @@ const Home: React.FC = () => {
         <div className="flex flex-wrap gap-4 mt-4">
           <Link to="/work" className="flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white text-base font-bold rounded-lg shadow-lg shadow-primary/25 hover:bg-primary-dark hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-300">
             View Case Studies
-            <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>layers</span>
+            <FiLayers className="w-5 h-5" />
           </Link>
           <Link to="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-transparent border border-secondary/30 text-white text-base font-bold rounded-lg hover:bg-secondary/10 hover:border-secondary transition-all duration-300 backdrop-blur-sm">
             Let's Talk
-            <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>chat_bubble</span>
+            <FiMessageCircle className="w-5 h-5" />
           </Link>
         </div>
 
@@ -54,14 +54,13 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      {/* Visual/Image Area */}
       <div className="flex-1 w-full lg:w-1/2 flex justify-center lg:justify-end relative">
         <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-[80px] pointer-events-none"></div>
         <div className="absolute bottom-10 -left-10 w-64 h-64 bg-secondary/10 rounded-full blur-[60px] pointer-events-none"></div>
 
         <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden glass-panel border-slate-700/50 group">
-          <div 
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
             style={{ backgroundImage: "url('https://picsum.photos/600/800?grayscale')" }}
           >
             <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent opacity-80"></div>
@@ -78,7 +77,7 @@ const Home: React.FC = () => {
                   <p className="text-secondary text-xs">@lamech.design</p>
                 </div>
                 <div className="ml-auto text-primary">
-                  <span className="material-symbols-outlined">verified</span>
+                  <HiOutlineCheckBadge className="w-5 h-5" />
                 </div>
               </div>
               <div className="flex gap-2">
@@ -90,12 +89,10 @@ const Home: React.FC = () => {
           </div>
 
           <div className="absolute top-6 right-6 p-3 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-primary">
-            <span className="material-symbols-outlined animate-spin-slow" style={{ fontSize: '24px' }}>view_in_ar</span>
+            <HiOutlineCube className="w-6 h-6 animate-spin-slow" />
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Home;
+}

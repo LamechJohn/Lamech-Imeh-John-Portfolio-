@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #008039;
+  --color-primary-dark: #005a28;
+  --color-primary-light: #00a64b;
+  --color-secondary: #7fbf9b;
+  --color-background-light: #f5f8f7;
+  --color-background-dark: #0a0f0c;
+  --color-surface-dark: #131c17;
+  --color-surface-darker: #0a1610;
+  --color-surface-dark-hover: #1a2e23;
+  --color-border-dark: #23332a;
+  --color-accent-text: #9abca9;
+  --color-card-dark: #0d1511;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  --background-image-grid-pattern: linear-gradient(to right, #1a2e23 1px, transparent 1px),
+    linear-gradient(to bottom, #1a2e23 1px, transparent 1px);
+  --background-image-radial-glow: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 128, 57, 0.15) 0%,
+    transparent 70%
+  );
+  --animate-spin-slow: spin 8s linear infinite;
+}
+
+/* Custom utilities from original styles - unchanged */
+.glass-panel {
+  background: rgba(19, 28, 23, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(127, 191, 155, 0.1);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(0, 128, 57, 0.5);
+  color: transparent;
+}
+
+/* Light theme overrides - only when .theme-light is on root */
+.theme-light {
+  --color-background-dark: #f5f8f7;
+  --color-surface-dark: #e8f0ec;
+  --color-surface-darker: #dce8e2;
+  --color-surface-dark-hover: #d0e0d8;
+  --color-border-dark: #c5d9cf;
+  --color-accent-text: #2d5a45;
+}
+
+.theme-light .glass-panel {
+  background: rgba(232, 240, 236, 0.8);
+  border-color: rgba(0, 128, 57, 0.15);
+}
+
+.theme-light body,
+.theme-light .min-h-screen {
+  background-color: #f5f8f7;
+}
+
+.theme-light .text-white {
+  color: #0a0f0c;
+}
+
+.theme-light .text-slate-300,
+.theme-light .text-slate-400,
+.theme-light .text-slate-500 {
+  color: #334d42;
+}
+
+.theme-light .bg-background-dark {
+  background-color: #f5f8f7;
+}
+
+.theme-light .bg-surface-dark {
+  background-color: #e8f0ec;
+}
+
+.theme-light .border-slate-800,
+.theme-light .border-white\/5,
+.theme-light .border-border-dark {
+  border-color: rgba(0, 128, 57, 0.2);
+}
+
+.theme-light .bg-grid-pattern {
+  background-image: linear-gradient(to right, #c5d9cf 1px, transparent 1px),
+    linear-gradient(to bottom, #c5d9cf 1px, transparent 1px);
+}
+
+.theme-light .bg-radial-glow {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 128, 57, 0.08) 0%,
+    transparent 70%
+  );
+}
+
+.theme-light .selection\:bg-primary::selection,
+.theme-light .selection\:bg-primary *::selection {
+  background-color: #008039;
+  color: #fff;
+}
+
+/* Background utilities from original theme */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, #1a2e23 1px, transparent 1px),
+    linear-gradient(to bottom, #1a2e23 1px, transparent 1px);
+}
+
+.bg-radial-glow {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 128, 57, 0.15) 0%,
+    transparent 70%
+  );
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
